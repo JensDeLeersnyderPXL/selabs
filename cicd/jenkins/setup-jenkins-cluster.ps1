@@ -8,7 +8,11 @@ rm -r -fo jenkins_data
 mkdir jenkins_data
 # create cluster with k3d config file
 k3d cluster create --config .\k3d-config.yaml
+<<<<<<< HEAD
 clustername=my-ci-cluster
+=======
+$clustername = "my-ci-cluster"
+>>>>>>> cdad29c3470f4f95fcb5fe14c27f89c3d2fbc128
 # $clustername = $(cat .\k3d-config.yaml | Select-String -Pattern 'name: ').Line.Remove(0, 6)
 # extract kubeconfig
 $KUBECONFIG = "$HOME\k3d\kubeconfig"
